@@ -8,6 +8,8 @@ export const connectDB = async () => {
       throw new Error('MONGO_URI is not defined in environment variables');
     }
 
+    console.log('Connecting to MongoDB with URI:', mongoURI.replace(/:([^@]+)@/, ':****@'));
+
     await mongoose.connect(mongoURI);
 
     console.log('MongoDB connected successfully');
