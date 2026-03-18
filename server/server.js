@@ -14,9 +14,7 @@ const PORT = process.env.PORT || 5000;
 connectDB();
 
 const corsOptions = {
-  origin: process.env.NODE_ENV === 'production'
-    ? ['https://tasky-bypreetham.netlify.app', 'http://localhost:3000']
-    : 'http://localhost:3000',
+  origin: '*', // Temporarily allow all for debugging
   credentials: true,
   optionsSuccessStatus: 200,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
@@ -43,6 +41,8 @@ app.use(errorHandler);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
+  console.log(`Environment: ${process.env.NODE_ENV}`);
+  console.log(`Base URL: /api/tasks`);
 });
 
 export default app;
