@@ -15,7 +15,7 @@ connectDB();
 
 const corsOptions = {
   origin: process.env.NODE_ENV === 'production'
-    ? ['https://your-netlify-domain.netlify.app', 'http://localhost:3000']
+    ? ['https://tasky-bypreetham.netlify.app', 'http://localhost:3000']
     : 'http://localhost:3000',
   credentials: true,
   optionsSuccessStatus: 200,
