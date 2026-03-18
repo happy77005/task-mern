@@ -2,7 +2,8 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 dotenv.config();
 
-let uri = (process.env.MONGO_URI || "mongodb+srv://haripreetham789:Mytask123v@firstcluster.rnycqqq.mongodb.net/?appName=Firstcluster").trim().replace(/^["'](.+)["']$/, '$1');
+const hardcodedURI = "mongodb+srv://haripreetham789:Mytask123v@firstcluster.rnycqqq.mongodb.net/?appName=Firstcluster";
+let uri = (process.env.MONGO_URI || hardcodedURI).trim().replace(/^["'](.+)["']$/, '$1');
 
 console.log("Attempting to connect to MongoDB...");
 console.log("URI (masked):", uri.replace(/:([^@]+)@/, ":****@"));

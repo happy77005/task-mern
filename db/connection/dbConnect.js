@@ -2,10 +2,12 @@ import mongoose from 'mongoose';
 
 export const connectDB = async () => {
   try {
-    let mongoURI = process.env.MONGO_URI;
+    // Hardcoded for learning purposes as requested
+    const hardcodedURI = "mongodb+srv://haripreetham789:Mytask123v@firstcluster.rnycqqq.mongodb.net/?appName=Firstcluster";
+    let mongoURI = process.env.MONGO_URI || hardcodedURI;
 
     if (!mongoURI) {
-      throw new Error('MONGO_URI is not defined in environment variables');
+      throw new Error('MONGO_URI is not defined');
     }
 
     // Clean the URI (remove whitespace and accidental quotes)
