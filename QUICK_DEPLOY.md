@@ -22,7 +22,7 @@ git push -u origin main
 4. Fill in:
    - **Name**: `task-manager-api`
    - **Environment**: `Node`
-   - **Build Command**: `npm install && npm run build`
+   - **Build Command**: `npm install`
    - **Start Command**: `node server/server.js`
 
 5. Scroll to **Environment** section, add:
