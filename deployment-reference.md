@@ -37,7 +37,7 @@ The backend service was connected to the GitHub repository on Render.
 **Environment Variables:**
 | Variable | Value |
 |----------|-------|
-| `MONGO_URI` | `mongodb+srv://haripreetham789:KvfNiz4auQv5M8VE@firstcluster.rnycqqq.mongodb.net/?appName=Firstcluster` |
+| `MONGO_URI` | `mongodb+srv://haripreetham789:Mytask123v@firstcluster.rnycqqq.mongodb.net/?appName=Firstcluster` |
 | `NODE_ENV` | `production` |
 | `PORT` | `5000` |
 

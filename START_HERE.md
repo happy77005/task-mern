@@ -60,7 +60,7 @@
 ```
 MongoDB Atlas:
   Username: haripreetham789
-  Password: KvfNiz4auQv5M8VE
+  Password: Mytask123v
   Connection String: Already configured!
 
 GitHub Repository:
@@ -91,7 +91,7 @@ git push -u origin main
 2. Create New Web Service
 3. Connect `task-mern` repository
 4. Set environment variables:
-   - `MONGO_URI` = `mongodb+srv://haripreetham789:KvfNiz4auQv5M8VE@firstcluster.rnycqqq.mongodb.net/?appName=Firstcluster`
+   - `MONGO_URI` = `mongodb+srv://haripreetham789:Mytask123v@firstcluster.rnycqqq.mongodb.net/?appName=Firstcluster`
    - `NODE_ENV` = `production`
    - `PORT` = `5000`
 5. Deploy!

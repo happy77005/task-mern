@@ -1,9 +1,9 @@
 mongoDB details:
 free tier 512MB on AWS..
-mongod DB password : KvfNiz4auQv5M8VE
+mongod DB password : Mytask123v
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://haripreetham789:<db_password>@firstcluster.rnycqqq.mongodb.net/?appName=Firstcluster";
+const uri = "mongodb+srv://haripreetham789:Mytask123v@firstcluster.rnycqqq.mongodb.net/?appName=Firstcluster";
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
