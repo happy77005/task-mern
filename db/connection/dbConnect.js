@@ -2,13 +2,23 @@ import mongoose from 'mongoose';
 
 export const connectDB = async () => {
   try {
-    const mongoURI = process.env.MONGO_URI;
+    let mongoURI = process.env.MONGO_URI;
 
     if (!mongoURI) {
       throw new Error('MONGO_URI is not defined in environment variables');
     }
 
-    console.log('Connecting to MongoDB with URI:', mongoURI.replace(/:([^@]+)@/, ':****@'));
+    // Clean the URI (remove whitespace and accidental quotes)
+    mongoURI = mongoURI.trim().replace(/^["'](.+)["']$/, '$1');
+
+    const usernameMatch = mongoURI.match(/\/\/([^:]+):/);
+    const hostMatch = mongoURI.match(/@([^/?]+)/);
+    const username = usernameMatch ? usernameMatch[1] : 'unknown';
+    const host = hostMatch ? hostMatch[1] : 'unknown';
+
+    console.log(`Connecting to MongoDB Atlas...`);
+    console.log(`User: ${username}`);
+    console.log(`Host: ${host}`);
 
     await mongoose.connect(mongoURI);
 
