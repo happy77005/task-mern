@@ -1,0 +1,9 @@
+{
+  "name": "task-manager-db",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Database models and connection for Task Manager app",
+  "dependencies": {
+    "mongoose": "^8.0.0"
+  }
+}

@@ -1,0 +1,33 @@
+mongoDB details:
+free tier 512MB on AWS..
+mongod DB password : KvfNiz4auQv5M8VE
+
+const { MongoClient, ServerApiVersion } = require('mongodb');
+const uri = "mongodb+srv://haripreetham789:<db_password>@firstcluster.rnycqqq.mongodb.net/?appName=Firstcluster";
+
+// Create a MongoClient with a MongoClientOptions object to set the Stable API version
+const client = new MongoClient(uri, {
+  serverApi: {
+    version: ServerApiVersion.v1,
+    strict: true,
+    deprecationErrors: true,
+  }
+});
+
+async function run() {
+  try {
+    // Connect the client to the server	(optional starting in v4.7)
+    await client.connect();
+    // Send a ping to confirm a successful connection
+    await client.db("admin").command({ ping: 1 });
+    console.log("Pinged your deployment. You successfully connected to MongoDB!");
+  } finally {
+    // Ensures that the client will close when you finish/error
+    await client.close();
+  }
+}
+run().catch(console.dir);
+created render web service -> asking git repo to deploy.
+created empty repository "https://github.com/happy77005/task-mern"
+already having netlify.
+directly use npm run build , netlify deploy --prod

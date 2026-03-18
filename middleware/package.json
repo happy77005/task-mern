@@ -1,0 +1,6 @@
+{
+  "name": "task-manager-middleware",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Middleware utilities for Task Manager app"
+}
