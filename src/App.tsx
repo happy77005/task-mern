@@ -59,6 +59,17 @@ function App() {
     }
   };
 
+  const handleUpdateTask = async (id: string, updates: { title?: string; completed?: boolean }) => {
+    try {
+      setError(null);
+      const updatedTask = await taskService.updateTask(id, updates);
+      setTasks(tasks.map((task) => (task._id === id ? updatedTask : task)));
+    } catch (err) {
+      setError('Failed to update task. Please try again.');
+      console.error('Error updating task:', err);
+    }
+  };
+
   const completedCount = tasks.filter((task) => task.completed).length;
   const totalCount = tasks.length;
 
@@ -102,6 +113,7 @@ function App() {
               tasks={tasks}
               onToggle={handleToggleTask}
               onDelete={handleDeleteTask}
+              onUpdate={handleUpdateTask}
             />
           </div>
         )}
